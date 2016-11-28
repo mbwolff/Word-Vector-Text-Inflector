@@ -44,15 +44,12 @@ for sentence in text:
 			string = mot
 			swap = model.most_similar(positive=[focus2, lemma],
 				negative=[focus1], topn=10)
-#			pprint(swap)
 			while len(swap) > 0: # go through the top 10 matches and find the
 			# first one that (1) has a pos (2) that is valid and (3) is a real
 			# word according to aspell
 				match = swap.pop(0)
-#				pprint(match)
 				if pd.get(match[0]) and pos in pd[match[0]] \
 					and s.check(match[0].encode('utf-8')):
-#					pprint(pd[match[0]])
 					string = match[0]
 					break
 			newsentence.append([correct_grammar(string, mot, pos, lemma), pos])
