@@ -13,7 +13,7 @@ sourcefile = 'FlaubertMadameBovary.txt'
 focus1 = 'homme'
 focus2 = 'femme'
 
-w2vfile = 'FRANTEXTmodel'
+w2vfile = 'ARTFLmodel'
 pklf = 'pos_dict.pkl'
 
 pickleFile = open(pklf, 'rb')
