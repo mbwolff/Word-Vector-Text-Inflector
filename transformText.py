@@ -9,7 +9,6 @@ from pattern.fr import singularize, pluralize, conjugate, tenses, lemma, \
 from fixWords import correct_grammar, fix_agreements, fix_word
 from pprint import pprint
 
-# sourcefile = '/Users/mark/Research/2016 DH/FRANTEXT/all-plain-texts/BAL.goriot.txt'
 sourcefile = 'FlaubertMadameBovary.txt'
 focus1 = 'homme'
 focus2 = 'femme'
