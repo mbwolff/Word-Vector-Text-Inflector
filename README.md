@@ -16,4 +16,4 @@ Using [gensim](https://radimrehurek.com/gensim/models/word2vec.html) to build a 
 >>> model.most_similar(positive=['femme', 'roi'], negative=['homme'], topn=1)
 [(u'reine', 0.8085041046142578)]
 ```
-Handling verb conjugations and adjective agreements in French is tricky but the code produces a mostly readable text that needs grammatical polishing (a good exercise for students). The code "modulates" any text in French against any pair of words.
+Handling verb conjugations and adjective agreements computationally in French is tricky but the code produces a mostly readable text needing grammatical polishing (a good exercise for students). The code "modulates" any text in French against any pair of words.
