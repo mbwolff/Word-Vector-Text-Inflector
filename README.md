@@ -10,10 +10,10 @@ Run the following command to produce the novel:
 ```
 ### A quick explanation of what's under the hood
 
-Using [gensim](https://radimrehurek.com/gensim/models/word2vec.html) to build a word2Vec model based on over 1300 French texts from the nineteenth century, I am writing code that takes a pair of words (e.g. "homme" and "femme") and a text (_Le Père Goriot_, by Balzac) as parameters and generates an "modulated" text. Each word in the original text is replaced by a word that is "most similar" to it according to the word pair. For instance, if "roi" is a word in the original text, it would be replaced thusly:
+Using [gensim](https://radimrehurek.com/gensim/models/word2vec.html) to build a word2Vec model based on over 1300 French texts from the nineteenth century, the code takes a pair of words (e.g. "homme" and "femme") and a text (_Madame Bovary_) as parameters and generates an "modulated" text. Each word in the original text is replaced by a word that is "most similar" to it according to the word pair. For instance, if "roi" is a word in the original text, it would be replaced thusly:
 
 ```
 >>> model.most_similar(positive=['femme', 'roi'], negative=['homme'], topn=1)
 [(u'reine', 0.8085041046142578)]
 ```
-Handling verb conjugations and adjective agreements in French is tricky but I aim to produce a mostly readable text. The code will hopefully be able to "modulate" any text in French against any pair of words.
+Handling verb conjugations and adjective agreements in French is tricky but the code produces a mostly readable text that needs grammatical polishing (a good exercise for students). The code "modulates" any text in French against any pair of words.
