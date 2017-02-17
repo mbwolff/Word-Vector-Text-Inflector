@@ -10,7 +10,7 @@ Run the following command to produce the novel:
 ```
 ### A quick explanation of what's under the hood
 
-Using [gensim](https://radimrehurek.com/gensim/models/word2vec.html) to build a word2Vec model based on over 1300 French texts from the nineteenth century, the code takes a pair of words (e.g. "homme" and "femme") and a text as parameters and generates an "modulated" text. Each word in the original text is replaced by a word that is "most similar" to it according to the word pair. For instance, if "roi" is a word in the original text, it would be replaced thusly:
+Using [gensim](https://radimrehurek.com/gensim/models/word2vec.html) to build a word2Vec model based on over 1300 French texts from the nineteenth century, the code takes a pair of words (e.g. "homme" and "femme") and a text as parameters to generate a "modulated" text. Each word in the original text is replaced by a word that is "most similar" to it according to the word pair. For instance, if "roi" is a word in the original text, it would be replaced thusly:
 
 ```
 >>> model.most_similar(positive=['femme', 'roi'], negative=['homme'], topn=1)
