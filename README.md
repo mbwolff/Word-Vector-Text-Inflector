@@ -6,5 +6,5 @@ This repository contains the code and data necessary to generate _Madame Bovary 
 Run the following command to produce the novel:
 
 ```
-./transformText.py > MadameBovaryDéclinée.txt
+./transformText.py > MadameBovaryModulée.txt
 ```
