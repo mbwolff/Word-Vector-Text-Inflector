@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # from __future__ import print_function
-import os, re, gensim, treetaggerwrapper, pickle, aspell
+import os, re, gensim, treetaggerwrapper, pickle, aspell, sys
 from pattern.fr import singularize, pluralize, conjugate, tenses, lemma, \
 	predicative, parsetree, split, parse, pprint, \
 	INFINITIVE, INDICATIVE, CONDITIONAL, SUBJUNCTIVE, \
@@ -9,9 +9,15 @@ from pattern.fr import singularize, pluralize, conjugate, tenses, lemma, \
 from fixWords import correct_grammar, fix_agreements, fix_word
 from pprint import pprint
 
-sourcefile = 'FlaubertMadameBovary.txt'
-focus1 = 'homme'
-focus2 = 'femme'
+# sourcefile = 'FlaubertMadameBovary.txt'
+# sourcefile = 'BaudelaireEnivrez.txt'
+# focus1 = 'homme'
+# focus2 = 'femme'
+# focus1 = 'boire'
+# focus2 = 'dormir'
+focus1 = sys.argv[1]
+focus2 = sys.argv[2]
+sourcefile = sys.argv[3]
 
 w2vfile = 'ARTFLmodel'
 pklf = 'pos_dict.pkl'
